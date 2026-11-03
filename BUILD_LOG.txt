@@ -1,0 +1,44 @@
+CONFIGURE:
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /mnt/data/vocal_hifi_workspace/build
+
+BUILD:
+[ 40%] [32mBuilding CXX object CMakeFiles/vocal_hifi.dir/src/vocal_hifi.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/vocal_hifi.dir/src/VocalProcessor.cpp.o[0m
+[ 60%] [32m[1mLinking CXX static library libvocal_hifi.a[0m
+[ 60%] Built target vocal_hifi
+[ 80%] [32mBuilding CXX object CMakeFiles/test_vocal_hifi.dir/tests/test_vocal_hifi.cpp.o[0m
+[100%] [32m[1mLinking CXX executable test_vocal_hifi[0m
+[100%] Built target test_vocal_hifi
+/mnt/data/vocal_hifi_workspace/src/vocal_hifi.cpp: In function ‘vp_status vp_set_param(vp_handle*, int, float)’:
+/mnt/data/vocal_hifi_workspace/src/vocal_hifi.cpp:19:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   19 |  if(!h) return VP_ERROR_NULL; return h->processor.setParameter(p,v);
+      |  ^~
+/mnt/data/vocal_hifi_workspace/src/vocal_hifi.cpp:19:31: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   19 |  if(!h) return VP_ERROR_NULL; return h->processor.setParameter(p,v);
+      |                               ^~~~~~
+/mnt/data/vocal_hifi_workspace/src/vocal_hifi.cpp: In function ‘vp_status vp_load_preset(vp_handle*, const char*)’:
+/mnt/data/vocal_hifi_workspace/src/vocal_hifi.cpp:39:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   39 |   if(*p++!='"') return VP_ERROR_PARSE; key[n]='\0';
+      |   ^~
+/mnt/data/vocal_hifi_workspace/src/vocal_hifi.cpp:39:40: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   39 |   if(*p++!='"') return VP_ERROR_PARSE; key[n]='\0';
+      |                                        ^~~
+
+TEST:
+Internal ctest changing into directory: /mnt/data/vocal_hifi_workspace/build
+Test project /mnt/data/vocal_hifi_workspace/build
+    Start 1: vocal_hifi_regression
+1/1 Test #1: vocal_hifi_regression ............   Passed    0.00 sec
+
+[0;32m100% tests passed[0;0m, 0 tests failed[0;0m out of 1
+
+Total Test time (real) =   0.01 sec
+
